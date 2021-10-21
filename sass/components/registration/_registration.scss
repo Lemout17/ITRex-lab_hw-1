@@ -1,6 +1,6 @@
 .registration-section {
   padding-top: 72px;
-  background-image: url('../../../img/bg-mobile@x2.jpg');
+  background-image: url('/../../img/bg-mobile@x2.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
@@ -127,9 +127,11 @@
     padding-left: 208px;
     background-image: url('../../../img/bg-tablet@x2.jpg');
     background-position: left;
+    background-size: cover;
   }
 
   .registration-form {
+    height: 1024px;
     padding: 168px 96px 80px;
     border-radius: 0;
   }
