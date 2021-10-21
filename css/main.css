@@ -32,7 +32,7 @@ p {
 
 .registration-section {
   padding-top: 72px;
-  background-image: url("/../../img/bg-mobile@x2.jpg");
+  background-image: url("../img/bg-mobile@x2.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
