@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <main>
+      <section class="login-section">
+        <form class="login-form">
+          <h3 class="login-form__title">Sign In</h3>
+
+          <label class="login-form__label">
+            <input
+              class="login-form__input"
+              type="email"
+              placeholder="Email"
+              autocomplete="on"
+              required
+            />
+            <svg class="login-input__svg">
+              <use href="./svg/sprite.svg#icon-email"></use>
+            </svg>
+          </label>
+          <label class="login-form__label">
+            <input
+              class="login-form__input"
+              type="number"
+              placeholder="Password"
+              required
+            />
+            <svg class="login-input__svg">
+              <use href="./svg/sprite.svg#icon-lock"></use>
+            </svg>
+          </label>
+
+          <p class="login-form__error">
+            Password contain unsupported characters
+          </p>
+
+          <button class="login-form__button" type="submit">
+            Sign in
+            <svg class="login-button__svg">
+              <use href="./svg/sprite.svg#icon-angle-right-b"></use>
+            </svg>
+          </button>
+
+          <a class="login-form__link" href="./restore.html">Forgot Password?</a>
+
+          <div class="login-form__textwrapper">
+            <p class="login-form__text">Already have an account?</p>
+            <a class="login-form__link" href="./index.html">Sign up</a>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

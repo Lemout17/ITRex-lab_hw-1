@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restore Password</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <main>
+      <section class="restore-section">
+        <form class="restore-form">
+          <h3 class="restore-form__title">
+            <svg class="restore-link__svg">
+              <use href="./svg/sprite.svg#icon-angle-left-b"></use>
+            </svg>
+            <a href="./login.html">Restore password</a>
+          </h3>
+
+          <p class="restore-form__description">
+            Please use your email address, and we’ll send you the link to reset
+            your password
+          </p>
+
+          <label class="restore-form__label">
+            <input
+              class="restore-form__input"
+              type="email"
+              placeholder="Email"
+              autocomplete="on"
+              required
+            />
+            <svg class="restore-input__svg">
+              <use href="./svg/sprite.svg#icon-email"></use>
+            </svg>
+          </label>
+
+          <button class="restore-form__button" type="submit">
+            Send Reset Link
+            <svg class="restore-button__svg">
+              <use href="./svg/sprite.svg#icon-angle-right-b"></use>
+            </svg>
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

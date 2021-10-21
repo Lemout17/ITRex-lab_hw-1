@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <main>
+      <section class="registration-section">
+        <form class="registration-form">
+          <h3 class="registration-form__title">Sign Up</h3>
+          <label class="registration-form__label">
+            <input
+              class="registration-form__input"
+              type="text"
+              placeholder="First Name"
+              autocomplete="on"
+              required
+            />
+            <svg class="registration-input__svg">
+              <use href="./svg/sprite.svg#icon-user"></use>
+            </svg>
+          </label>
+          <label class="registration-form__label">
+            <input
+              class="registration-form__input"
+              type="text"
+              placeholder="Last Name"
+              autocomplete="on"
+              required
+            />
+            <svg class="registration-input__svg">
+              <use href="./svg/sprite.svg#icon-user"></use>
+            </svg>
+          </label>
+          <label class="registration-form__label">
+            <input
+              class="registration-form__input"
+              type="email"
+              placeholder="Email"
+              autocomplete="on"
+              required
+            />
+            <svg class="registration-input__svg">
+              <use href="./svg/sprite.svg#icon-email"></use>
+            </svg>
+          </label>
+          <label class="registration-form__label">
+            <input
+              class="registration-form__input"
+              type="number"
+              placeholder="Password"
+              required
+            />
+            <svg class="registration-input__svg">
+              <use href="./svg/sprite.svg#icon-lock"></use>
+            </svg>
+          </label>
+          <label class="registration-form__label">
+            <input
+              class="registration-form__input"
+              type="number"
+              placeholder="Confirm Password"
+              required
+            />
+            <svg class="registration-input__svg">
+              <use href="./svg/sprite.svg#icon-check"></use>
+            </svg>
+          </label>
+
+          <button class="registration-form__button" type="submit">
+            Sign up
+            <svg class="registration-button__svg">
+              <use href="./svg/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+
+          <div class="registration-form__textwrapper">
+            <p class="registration-form__text">Already have an account?</p>
+            <a class="registration-form__link" href="./login.html">Sign in</a>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
