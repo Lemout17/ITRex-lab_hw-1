@@ -646,7 +646,7 @@ p {
 
 .confirm-section {
   padding-top: 72px;
-  background-image: url("../../../img/bg-mobile@x2.jpg");
+  background-image: url("../img/bg-mobile@x2.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
@@ -702,7 +702,7 @@ p {
   .confirm-section {
     padding: 0;
     padding-left: 208px;
-    background-image: url("../../../img/bg-tablet-login@x2.jpg");
+    background-image: url("../img/bg-tablet-login@x2.jpg");
     background-position: left;
   }
   .confirm-container {
@@ -721,7 +721,7 @@ p {
 
 @media screen and (min-width: 1280px) {
   .confirm-section {
-    background-image: url("../../../img/bg-desktop@x2.jpg");
+    background-image: url("../img/bg-desktop@x2.jpg");
   }
   .confirm-container {
     width: 560px;
