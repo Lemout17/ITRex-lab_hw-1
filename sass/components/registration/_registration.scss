@@ -91,6 +91,8 @@
   border: none;
   border-radius: 8px;
   background-color: $input-accent;
+
+  cursor: pointer;
 }
 
 .registration-button__svg {
@@ -174,6 +176,7 @@
     height: 56px;
     padding: 16px 24px;
     margin-bottom: 120px;
+    font-size: 17px;
   }
 
   .registration-button__svg {

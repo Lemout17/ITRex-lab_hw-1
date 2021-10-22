@@ -100,6 +100,8 @@
   border: none;
   border-radius: 8px;
   background-color: $input-accent;
+
+  cursor: pointer;
 }
 
 .login-button__svg {
@@ -192,6 +194,7 @@
     height: 56px;
     padding: 16px 24px;
     margin-bottom: 32px;
+    font-size: 17px;
   }
 
   .login-button__svg {

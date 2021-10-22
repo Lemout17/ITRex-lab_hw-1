@@ -30,6 +30,18 @@ p {
   margin: 0;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .registration-section {
   padding-top: 72px;
   background-image: url("../img/bg-mobile@x2.jpg");
@@ -117,6 +129,7 @@ p {
   border: none;
   border-radius: 8px;
   background-color: #7297ff;
+  cursor: pointer;
 }
 
 .registration-button__svg {
@@ -189,6 +202,7 @@ p {
     height: 56px;
     padding: 16px 24px;
     margin-bottom: 120px;
+    font-size: 17px;
   }
   .registration-button__svg {
     top: 15px;
@@ -310,6 +324,7 @@ p {
   border: none;
   border-radius: 8px;
   background-color: #7297ff;
+  cursor: pointer;
 }
 
 .login-button__svg {
@@ -390,6 +405,7 @@ p {
     height: 56px;
     padding: 16px 24px;
     margin-bottom: 32px;
+    font-size: 17px;
   }
   .login-button__svg {
     top: 15px;
@@ -532,6 +548,7 @@ p {
   border: none;
   border-radius: 8px;
   background-color: #7297ff;
+  cursor: pointer;
 }
 
 .restore-button__svg {
