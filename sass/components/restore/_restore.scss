@@ -3,6 +3,12 @@
   padding: 32px;
 }
 
+.form__input__wrapper_restore {
+  &:nth-child(1)::before {
+    background-image: url('../../../svg/email.svg');
+  }
+}
+
 .form__title_restore {
   position: relative;
   margin-left: 38px;

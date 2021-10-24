@@ -14,29 +14,28 @@
         <form class="form form_login">
           <h3 class="form__title">Sign In</h3>
 
-          <label class="form__label form__label_login">
-            <input
-              class="form__input"
-              type="email"
-              placeholder="Email"
-              autocomplete="on"
-              required
-            />
-            <svg class="input__svg">
-              <use href="./svg/sprite.svg#icon-email"></use>
-            </svg>
-          </label>
-          <label class="form__label form__label_login">
-            <input
-              class="form__input form__input_error"
-              type="number"
-              placeholder="Password"
-              required
-            />
-            <svg class="input__svg">
-              <use href="./svg/sprite.svg#icon-lock"></use>
-            </svg>
-          </label>
+          <div>
+            <div class="form__input__wrapper form__input__wrapper_login">
+              <input
+                class="form__input"
+                type="email"
+                placeholder="Email"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <div class="form__input__wrapper form__input__wrapper_login">
+              <input
+                class="form__input form__input_error"
+                type="number"
+                placeholder="Password"
+                required
+              />
+              <svg class="input__svg">
+                <use href="./svg/sprite.svg#icon-eye-slash"></use>
+              </svg>
+            </div>
+          </div>
 
           <p class="form__text_error">
             Password contain unsupported characters

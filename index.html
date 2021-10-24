@@ -12,65 +12,59 @@
     <main>
       <section class="section">
         <form class="form">
-          <h3 class="form__title">Sign Up</h3>
-          <label class="form__label">
-            <input
-              class="form__input"
-              type="text"
-              placeholder="First Name"
-              autocomplete="on"
-              required
-            />
-            <svg class="input__svg">
-              <use href="./svg/sprite.svg#icon-user"></use>
-            </svg>
-          </label>
-          <label class="form__label">
-            <input
-              class="form__input"
-              type="text"
-              placeholder="Last Name"
-              autocomplete="on"
-              required
-            />
-            <svg class="input__svg">
-              <use href="./svg/sprite.svg#icon-user"></use>
-            </svg>
-          </label>
-          <label class="form__label">
-            <input
-              class="form__input"
-              type="email"
-              placeholder="Email"
-              autocomplete="on"
-              required
-            />
-            <svg class="input__svg">
-              <use href="./svg/sprite.svg#icon-email"></use>
-            </svg>
-          </label>
-          <label class="form__label">
-            <input
-              class="form__input"
-              type="text"
-              placeholder="Password"
-              required
-            />
-            <svg class="input__svg">
-              <use href="./svg/sprite.svg#icon-lock"></use>
-            </svg>
-          </label>
-          <label class="form__label">
-            <input
-              class="form__input"
-              type="text"
-              placeholder="Confirm Password"
-              required
-            />
-            <svg class="input__svg">
-              <use href="./svg/sprite.svg#icon-check"></use>
-            </svg>
-          </label>
+          <h2 class="form__title">Sign Up</h2>
+          <div>
+            <div class="form__input__wrapper">
+              <input
+                class="form__input"
+                type="text"
+                placeholder="First Name"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <div class="form__input__wrapper">
+              <input
+                class="form__input"
+                type="text"
+                placeholder="Last Name"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <div class="form__input__wrapper">
+              <input
+                class="form__input"
+                type="email"
+                placeholder="Email"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <div class="form__input__wrapper">
+              <input
+                class="form__input"
+                type="text"
+                placeholder="Password"
+                required
+              />
+
+              <svg class="input__svg">
+                <use href="./svg/sprite.svg#icon-eye-slash"></use>
+              </svg>
+            </div>
+            <div class="form__input__wrapper">
+              <input
+                class="form__input"
+                type="text"
+                placeholder="Confirm Password"
+                required
+              />
+              <svg class="input__svg">
+                <use href="./svg/sprite.svg#icon-eye-slash"></use>
+              </svg>
+            </div>
+          </div>
 
           <button class="form__button" type="submit">
             Sign up

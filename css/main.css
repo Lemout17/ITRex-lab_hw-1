@@ -116,19 +116,43 @@ p {
   color: #202225;
 }
 
-.form__label {
+.form__input__wrapper {
   position: relative;
+  margin-bottom: 24px;
   color: #a1abc9;
 }
 
-.form__label:last-of-type input {
+.form__input__wrapper:last-child {
   margin-bottom: 32px;
+}
+
+.form__input__wrapper::before {
+  position: absolute;
+  top: 7px;
+  left: 17px;
+  display: block;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url("../../../svg/user.svg");
+}
+
+.form__input__wrapper:nth-child(3)::before {
+  background-image: url("../../../svg/email.svg");
+}
+
+.form__input__wrapper:nth-child(4)::before {
+  background-image: url("../../../svg/lock.svg");
+}
+
+.form__input__wrapper:nth-child(5)::before {
+  background-image: url("../../../svg/check.svg");
 }
 
 .input__svg {
   position: absolute;
-  top: 0;
-  left: 17px;
+  top: 7px;
+  right: 18px;
   width: 24px;
   height: 24px;
   fill: currentColor;
@@ -138,7 +162,6 @@ p {
   width: 100%;
   height: 40px;
   padding: 9.5px 18px 9.5px 48px;
-  margin-bottom: 24px;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.4;
@@ -240,6 +263,16 @@ p {
     line-height: 1.1;
     margin-bottom: 40px;
   }
+  .form__input__wrapper {
+    margin-bottom: 40px;
+  }
+  .form__input__wrapper:last-child {
+    margin-bottom: 64px;
+  }
+  .form__input__wrapper::before {
+    top: 16px;
+    left: 28px;
+  }
   .link__svg {
     top: 1px;
   }
@@ -250,8 +283,8 @@ p {
     margin-bottom: 64px;
   }
   .input__svg {
-    top: 0;
-    left: 26px;
+    top: 16px;
+    right: 27px;
   }
   .form__text_error {
     margin-bottom: 40px;
@@ -259,7 +292,6 @@ p {
   .form__input {
     height: 56px;
     padding: 16px 18px 16px 64px;
-    margin-bottom: 40px;
     font-size: 17px;
   }
   .form__input::placeholder {
@@ -301,8 +333,16 @@ p {
   padding: 32px 32px 48px;
 }
 
-.form__label_login:last-of-type input {
+.form__input__wrapper_login:last-child {
   margin-bottom: 16px;
+}
+
+.form__input__wrapper_login:nth-child(1)::before {
+  background-image: url("../../../svg/email.svg");
+}
+
+.form__input__wrapper_login:nth-child(2)::before {
+  background-image: url("../../../svg/lock.svg");
 }
 
 .form__button_login {
@@ -311,6 +351,7 @@ p {
 }
 
 .form__link_login {
+  margin: 0;
   margin-bottom: 97px;
   font-weight: 500;
 }
@@ -327,9 +368,6 @@ p {
   }
   .form_login {
     padding: 264px 96px 80px;
-  }
-  .form__label_login:last-of-type input {
-    margin-bottom: 8px;
   }
   .form__button_login {
     width: 138px;
@@ -352,6 +390,10 @@ p {
 .form_restore {
   height: calc(100vh - 37px);
   padding: 32px;
+}
+
+.form__input__wrapper_restore:nth-child(1)::before {
+  background-image: url("../../../svg/email.svg");
 }
 
 .form__title_restore {

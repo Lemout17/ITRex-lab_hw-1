@@ -6,9 +6,17 @@
   padding: 32px 32px 48px;
 }
 
-.form__label_login {
-  &:last-of-type input {
+.form__input__wrapper_login {
+  &:last-child {
     margin-bottom: 16px;
+  }
+
+  &:nth-child(1)::before {
+    background-image: url('../../../svg/email.svg');
+  }
+
+  &:nth-child(2)::before {
+    background-image: url('../../../svg/lock.svg');
   }
 }
 
@@ -18,6 +26,7 @@
 }
 
 .form__link_login {
+  margin: 0;
   margin-bottom: 97px;
   font-weight: 500;
 }
@@ -37,12 +46,6 @@
 
   .form_login {
     padding: 264px 96px 80px;
-  }
-
-  .form__label_login {
-    &:last-of-type input {
-      margin-bottom: 8px;
-    }
   }
 
   .form__button_login {
