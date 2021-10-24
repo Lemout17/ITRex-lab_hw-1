@@ -34,19 +34,19 @@
     content: '';
     width: 24px;
     height: 24px;
-    background-image: url('../../../svg/user.svg');
+    background-image: url('../svg/user.svg');
   }
 
   &:nth-child(3)::before {
-    background-image: url('../../../svg/email.svg');
+    background-image: url('../svg/email.svg');
   }
 
   &:nth-child(4)::before {
-    background-image: url('../../../svg/lock.svg');
+    background-image: url('../svg/lock.svg');
   }
 
   &:nth-child(5)::before {
-    background-image: url('../../../svg/check.svg');
+    background-image: url('../svg/check.svg');
   }
 }
 

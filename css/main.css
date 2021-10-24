@@ -134,19 +134,19 @@ p {
   content: '';
   width: 24px;
   height: 24px;
-  background-image: url("../../../svg/user.svg");
+  background-image: url("../svg/user.svg");
 }
 
 .form__input__wrapper:nth-child(3)::before {
-  background-image: url("../../../svg/email.svg");
+  background-image: url("../svg/email.svg");
 }
 
 .form__input__wrapper:nth-child(4)::before {
-  background-image: url("../../../svg/lock.svg");
+  background-image: url("../svg/lock.svg");
 }
 
 .form__input__wrapper:nth-child(5)::before {
-  background-image: url("../../../svg/check.svg");
+  background-image: url("../svg/check.svg");
 }
 
 .input__svg {
@@ -338,11 +338,11 @@ p {
 }
 
 .form__input__wrapper_login:nth-child(1)::before {
-  background-image: url("../../../svg/email.svg");
+  background-image: url("../svg/email.svg");
 }
 
 .form__input__wrapper_login:nth-child(2)::before {
-  background-image: url("../../../svg/lock.svg");
+  background-image: url("../svg/lock.svg");
 }
 
 .form__button_login {
@@ -393,7 +393,7 @@ p {
 }
 
 .form__input__wrapper_restore:nth-child(1)::before {
-  background-image: url("../../../svg/email.svg");
+  background-image: url("../svg/email.svg");
 }
 
 .form__title_restore {
