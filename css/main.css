@@ -101,7 +101,7 @@ p {
 
 .form {
   width: 100%;
-  height: calc(100vh - 25px);
+  min-height: calc(100vh - 71px);
   padding: 32px;
   border: none;
   border-radius: 24px 24px 0px 0px;
@@ -110,16 +110,29 @@ p {
 
 .form__title {
   margin-bottom: 24px;
+}
+
+.form__title-text {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
   color: #202225;
 }
 
-.form__title_with-link {
-  padding-left: 40px;
-  background-image: url("../svg/angle-left-b.svg");
+.form__title-link {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../../svg/angle-left-b.svg");
   background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.form__title_with-link {
+  position: relative;
+  padding-left: 40px;
 }
 
 .form__input__wrapper {
@@ -265,9 +278,11 @@ p {
     border-radius: 0;
   }
   .form__title {
+    margin-bottom: 40px;
+  }
+  .form__title-text {
     font-size: 24px;
     line-height: 1.1;
-    margin-bottom: 40px;
   }
   .form__input__wrapper {
     margin-bottom: 40px;
@@ -335,10 +350,6 @@ p {
   background-image: url("../img/bg-mobile@x2.jpg");
 }
 
-.form_login {
-  padding: 32px 32px 48px;
-}
-
 .form__input__wrapper_login:last-child {
   margin-bottom: 16px;
 }
@@ -393,11 +404,6 @@ p {
   }
 }
 
-.form_restore {
-  height: calc(100vh - 37px);
-  padding: 32px;
-}
-
 .form__input__wrapper_restore:nth-child(1)::before {
   background-image: url("../svg/email.svg");
 }
@@ -437,7 +443,7 @@ p {
 }
 
 .container_confirm {
-  height: calc(100vh - 72px);
+  min-height: calc(100vh - 72px);
 }
 
 .form__description_confirm a {

@@ -1,8 +1,3 @@
-.form_restore {
-  height: calc(100vh - 37px);
-  padding: 32px;
-}
-
 .form__input__wrapper_restore {
   &:nth-child(1)::before {
     background-image: url('../svg/email.svg');
