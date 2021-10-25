@@ -101,7 +101,7 @@ p {
 
 .form {
   width: 100%;
-  height: auto;
+  height: calc(100vh - 25px);
   padding: 32px;
   border: none;
   border-radius: 24px 24px 0px 0px;
@@ -114,6 +114,12 @@ p {
   font-weight: 600;
   line-height: 1.2;
   color: #202225;
+}
+
+.form__title_with-link {
+  padding-left: 40px;
+  background-image: url("../../../svg/angle-left-b.svg");
+  background-repeat: no-repeat;
 }
 
 .form__input__wrapper {
@@ -396,15 +402,6 @@ p {
   background-image: url("../svg/email.svg");
 }
 
-.form__title_restore {
-  position: relative;
-  margin-left: 38px;
-}
-
-.form__title_restore a {
-  color: inherit;
-}
-
 .form__button_restore {
   width: 198px;
 }
@@ -441,15 +438,6 @@ p {
 
 .container_confirm {
   height: calc(100vh - 72px);
-}
-
-.form__title_confirm {
-  position: relative;
-  margin-left: 38px;
-}
-
-.form__title_confirm a {
-  color: inherit;
 }
 
 .form__description_confirm a {

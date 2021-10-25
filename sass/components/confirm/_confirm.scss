@@ -2,15 +2,6 @@
   height: calc(100vh - 72px);
 }
 
-.form__title_confirm {
-  position: relative;
-  margin-left: 38px;
-
-  & a {
-    color: inherit;
-  }
-}
-
 .form__description_confirm {
   & a {
     display: inline;
