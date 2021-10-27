@@ -1,6 +1,7 @@
 const SignIn = {
   render: () => {
     return `
+     <main>
      <section class="section section_login">
         <form class="form" autocomplete="on">
           <div class="form__title">
@@ -51,6 +52,7 @@ const SignIn = {
           </div>
         </form>
       </section>
+     </main>
     `
   },
 }

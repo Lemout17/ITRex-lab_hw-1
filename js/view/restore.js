@@ -1,6 +1,7 @@
 const Restore = {
   render: () => {
     return `
+     <main>
       <section class="section section_login">
   <form class="form form_restore">
     <div class="form__title form__title_with-link">
@@ -33,6 +34,7 @@ const Restore = {
     </button>
   </form>
 </section>
+</main>
     `
   },
 }

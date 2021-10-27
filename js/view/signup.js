@@ -1,7 +1,8 @@
 const SignUp = {
   render: () => {
     return `
-       <section class="section">
+       <main>
+        <section class="section">
         <form class="form">
           <div class="form__title">
             <span class="form__title-text">Sign Up</span>
@@ -74,6 +75,7 @@ const SignUp = {
           </div>
         </form>
       </section>
+       </main>
     `
   },
 }

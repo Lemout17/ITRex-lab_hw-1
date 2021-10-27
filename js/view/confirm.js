@@ -1,6 +1,7 @@
 const Confirm = {
   render: () => {
     return `
+    <main>
      <section class="section section_login">
         <div class="container container_confirm">
           <div class="form__title form__title_with-link">
@@ -14,6 +15,7 @@ const Confirm = {
           </p>
         </div>
       </section>
+    </main>
     `
   },
 }

@@ -1,16 +1,20 @@
 import SignUp from './signup.js'
 import SignIn from './signin.js'
-import Restore from './restore.js'
-import Confirm from './confirm.js'
-import ErrorComponent from './error.js'
+import RestorePage from './restore.js'
+import ConfirmPage from './confirm.js'
+import DoctorPage from './doctor.js'
+import ErrorPage from './error.js'
 import handleChangeUrl from '../link.js'
 
 const routes = [
   { path: '/', component: SignUp },
   { path: '/signin', component: SignIn },
-  { path: '/restore', component: Restore },
-  { path: '/confirm', component: Confirm },
+  { path: '/restore', component: RestorePage },
+  { path: '/confirm', component: ConfirmPage },
+  { path: '/doctor', component: DoctorPage },
 ]
+
+console.log(location.hash.slice(1).toLowerCase())
 
 const parseLocation = () => location.hash.slice(1).toLowerCase() || '/'
 
@@ -20,7 +24,7 @@ const findComponentByPath = (path, routes) =>
 const router = () => {
   const path = parseLocation()
 
-  const { component = ErrorComponent } = findComponentByPath(path, routes) || {}
+  const { component = ErrorPage } = findComponentByPath(path, routes) || {}
 
   document.getElementById('root').innerHTML = component.render()
   const section = document.querySelector('.section')
