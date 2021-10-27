@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="./css/modern-normalize.css" />
-    <link rel="stylesheet" href="./css/main.min.css" />
-  </head>
-  <body>
-    <main>
-      <section class="section section_login">
-        <form class="form">
+const SignIn = {
+  render: () => {
+    return `
+     <section class="section section_login">
+        <form class="form" autocomplete="on">
           <div class="form__title">
             <span class="form__title-text">Sign In</span>
           </div>
@@ -30,6 +21,7 @@
                 class="form__input form__input_error"
                 type="password"
                 placeholder="Password"
+                autocomplete="on"
                 required
               />
               <svg class="input__svg">
@@ -49,16 +41,18 @@
             </svg>
           </button>
 
-          <a class="form__link form__link_login" href="./restore.html"
+          <a class="form__link form__link_login" href="#" data-name="/restore"
             >Forgot Password?</a
           >
 
           <div class="form__textwrapper form__textwrapper_login">
             <p class="form__text">Already have an account?</p>
-            <a class="form__link" href="./index.html">Sign up</a>
+            <a class="form__link" href="#" data-name="/">Sign up</a>
           </div>
         </form>
       </section>
-    </main>
-  </body>
-</html>
+    `
+  },
+}
+
+export default SignIn
