@@ -1,4 +1,4 @@
-const validation = () => {
+const validationSignUp = () => {
   const username = document.getElementById('name')
   const surname = document.getElementById('surname')
   const email = document.getElementById('email')
@@ -75,7 +75,7 @@ const validation = () => {
     errorMessageEmail.innerHTML = ''
   }
 
-  if (password.value === '') {
+  if (password?.value === '') {
     password.classList.add('form__input_error')
     errorMessagePassword.innerHTML = 'Please enter your password.'
     errorMessagePassword.classList.add('form__text_error')
@@ -154,4 +154,4 @@ const passwordIsValid = (password) => {
   return /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)
 }
 
-export default validation
+export default validationSignUp

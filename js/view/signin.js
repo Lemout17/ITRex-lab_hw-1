@@ -13,31 +13,28 @@ const SignIn = {
                 class="form__input"
                 type="email"
                 placeholder="Email"
+                id="email"
                 autocomplete="on"
                 required
               />
-              
+              <p class="error-message__email"></p>
             </div>
             
             <div class="form__input__wrapper form__input__wrapper_login">
               <input
-                class="form__input form__input_error"
+                class="form__input"
                 type="password"
                 placeholder="Password"
+                id="password"
                 autocomplete="on"
                 required
               />
-              <svg class="input__svg">
-                <use href="./svg/sprite.svg#icon-eye-slash"></use>
-              </svg>
+              <div class="input__svg input__svg_close"></div>
+              <p class="error-message__password"></p>
             </div>
           </div>
 
-          <p class="form__text_error">
-            Password contain unsupported characters
-          </p>
-
-          <button class="form__button form__button_login" type="submit">
+          <button class="form__button form__button_login" type="submit" data-name="/doctor">
             Sign in
             <svg class="button__svg">
               <use href="./svg/sprite.svg#icon-angle-right-b"></use>

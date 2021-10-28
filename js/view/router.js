@@ -4,6 +4,8 @@ import RestorePage from './restore.js'
 import ConfirmPage from './confirm.js'
 import DoctorPage from './doctor.js'
 import ErrorPage from './error.js'
+import handleSubmitSignUp from '../handlers/submitSignUp.js'
+import handleSubmitSignIn from '../handlers/submitSignIn.js'
 import handleChangeUrl from '../handlers/changeUrl.js'
 import togglePassword from '../handlers/togglePassword.js'
 
@@ -32,6 +34,8 @@ const router = () => {
   const form = document.querySelector('.form')
   section?.addEventListener('click', handleChangeUrl)
   form?.addEventListener('click', togglePassword)
+  form?.addEventListener('click', handleSubmitSignUp)
+  form?.addEventListener('click', handleSubmitSignIn)
 }
 
 window.addEventListener('hashchange', router)

@@ -47,12 +47,11 @@ const SignUp = {
                 type="password"
                 placeholder="Password"
                 id="password"
-                autocomplete 
+                autocomplete="on" 
                 required
               />
               <div class="input__svg input__svg_close"></div>
               <p class="error-message__password"></p>
-              
             </div>
             <div class="form__input__wrapper">
               <input
@@ -69,7 +68,7 @@ const SignUp = {
             </div>
           </div>
 
-          <button class="form__button" type="submit" data-name="/doctor">
+          <button class="form__button form__button_register" type="submit" data-name="/doctor">
             Sign up
             <svg class="button__svg">
               <use href="./svg/sprite.svg#icon-angle-right-b"></use>

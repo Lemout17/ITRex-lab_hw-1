@@ -20,9 +20,11 @@ const Restore = {
           class="form__input"
           type="email"
           placeholder="Email"
+          id="email"
           autocomplete="on"
           required
         />
+        <p class="error-message__email"></p>
       </div>
     </div>
 
