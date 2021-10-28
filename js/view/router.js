@@ -4,7 +4,7 @@ import RestorePage from './restore.js'
 import ConfirmPage from './confirm.js'
 import DoctorPage from './doctor.js'
 import ErrorPage from './error.js'
-import handleChangeUrl from '../link.js'
+import handleChangeUrl from '../handlers/changeUrl.js'
 
 const routes = [
   { path: '/', component: SignUp },

@@ -8,6 +8,12 @@
   background-color: $main-bg;
 }
 
+.container__doctor {
+  padding: 40px 24px;
+
+  outline: 1px solid green;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     padding: 264px 96px 620px;

@@ -26,7 +26,7 @@ const Restore = {
       </div>
     </div>
 
-    <button class="form__button form__button_restore" type="submit" data-name="/signin">
+    <button class="form__button form__button_restore" type="submit" data-name="/confirm">
       Send Reset Link
       <svg class="button__svg button__svg_restore">
         <use href="./svg/sprite.svg#icon-angle-right-b"></use>

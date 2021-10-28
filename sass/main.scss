@@ -1,5 +1,5 @@
-@import './base/base';
 @import './utils/variables';
+@import './base/base';
 @import './components/header/header';
 @import './components/container/container';
 @import './components/section/section';
@@ -7,3 +7,4 @@
 @import './components/login/login';
 @import './components/restore/restore';
 @import './components/confirm/confirm';
+@import './components/doctor/doctor';
