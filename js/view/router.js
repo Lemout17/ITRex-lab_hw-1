@@ -5,6 +5,7 @@ import ConfirmPage from './confirm.js'
 import DoctorPage from './doctor.js'
 import ErrorPage from './error.js'
 import handleChangeUrl from '../handlers/changeUrl.js'
+import togglePassword from '../handlers/togglePassword.js'
 
 const routes = [
   { path: '/', component: SignUp },
@@ -28,7 +29,9 @@ const router = () => {
 
   document.getElementById('root').innerHTML = component.render()
   const section = document.querySelector('.section')
+  const form = document.querySelector('.form')
   section?.addEventListener('click', handleChangeUrl)
+  form?.addEventListener('click', togglePassword)
 }
 
 window.addEventListener('hashchange', router)

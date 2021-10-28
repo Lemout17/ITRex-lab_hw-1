@@ -76,7 +76,23 @@
   right: 18px;
   width: 24px;
   height: 24px;
-  fill: currentColor;
+  color: $text-color;
+
+  background-size: cover;
+
+  cursor: pointer;
+}
+
+.input__svg_open {
+  background-image: url('../../../svg/eye.svg');
+}
+
+.input__svg_close {
+  background-image: url('../../../svg/eye-blocked.svg');
+}
+
+.input__svg_hidden {
+  display: none;
 }
 
 .form__input {

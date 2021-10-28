@@ -50,10 +50,9 @@ const SignUp = {
                 autocomplete 
                 required
               />
+              <div class="input__svg input__svg_close"></div>
               <p class="error-message__password"></p>
-                <svg class="input__svg">
-                <use href="./svg/sprite.svg#icon-eye-slash"></use>
-              </svg>
+              
             </div>
             <div class="form__input__wrapper">
               <input
@@ -64,10 +63,9 @@ const SignUp = {
                 autocomplete 
                 required
               />
+              <div class="input__svg input__svg_close"></div>
               <p class="error-message__confirmPass"></p>
-              <svg class="input__svg">
-                <use href="./svg/sprite.svg#icon-eye-slash"></use>
-              </svg>
+              
             </div>
           </div>
 
