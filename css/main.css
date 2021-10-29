@@ -435,7 +435,7 @@ p {
 }
 
 .form__input__wrapper_login:last-child {
-  margin-bottom: 16px;
+  margin-bottom: 64px;
 }
 
 .form__input__wrapper_login:nth-child(1)::before {

@@ -4,10 +4,7 @@ import RestorePage from './restore.js'
 import ConfirmPage from './confirm.js'
 import DoctorPage from './doctor.js'
 import ErrorPage from './error.js'
-import handleSubmitSignUp from '../handlers/submitSignUp.js'
-import handleSubmitSignIn from '../handlers/submitSignIn.js'
-import handleChangeUrl from '../handlers/changeUrl.js'
-import togglePassword from '../handlers/togglePassword.js'
+import handler from '../handlers/handler.js'
 
 const routes = [
   { path: '/', component: SignUp },
@@ -16,8 +13,6 @@ const routes = [
   { path: '/confirm', component: ConfirmPage },
   { path: '/doctor', component: DoctorPage },
 ]
-
-console.log(location.hash.slice(1).toLowerCase())
 
 const parseLocation = () => location.hash.slice(1).toLowerCase() || '/'
 
@@ -31,11 +26,8 @@ const router = () => {
 
   document.getElementById('root').innerHTML = component.render()
   const section = document.querySelector('.section')
-  const form = document.querySelector('.form')
-  section?.addEventListener('click', handleChangeUrl)
-  form?.addEventListener('click', togglePassword)
-  form?.addEventListener('click', handleSubmitSignUp)
-  form?.addEventListener('click', handleSubmitSignIn)
+
+  section?.addEventListener('click', handler)
 }
 
 window.addEventListener('hashchange', router)
