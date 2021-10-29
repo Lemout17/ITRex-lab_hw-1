@@ -27,6 +27,7 @@ const SignIn = {
                 placeholder="Password"
                 id="password"
                 autocomplete="on"
+                title="Password must contain minimum eight characters, at least one letter and one number"
                 required
               />
               <div class="input__svg input__svg_close"></div>

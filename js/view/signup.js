@@ -46,6 +46,7 @@ const SignUp = {
                 class="form__input"
                 type="password"
                 placeholder="Password"
+                title="Password must contain minimum eight characters, at least one letter and one number"
                 id="password"
                 autocomplete="on" 
                 required
