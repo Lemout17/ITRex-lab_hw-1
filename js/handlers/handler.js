@@ -1,21 +1,19 @@
-import router from '../view/router.js'
+// import router from '../view/router.js'
 import validationSignIn from '../validation/validationSignIn.js'
 import validationSignUp from '../validation/validationSignUp.js'
 
-const Handler = (e) => {
-  console.log(e.target)
-
+const Handler = (router, routes) => (e) => {
   const handleChangeUrl = (e) => {
     e.preventDefault()
     history.pushState({}, null, `/#${e.target.dataset.name}`)
-    router()
+    router(routes)
   }
 
   const handleSubmitSignUp = (e) => {
     e.preventDefault()
     if (validationSignUp()) {
       history.pushState({}, null, `/#${e.target.dataset.name}`)
-      router()
+      router(routes)
     }
   }
 
@@ -23,7 +21,7 @@ const Handler = (e) => {
     e.preventDefault()
     if (validationSignIn()) {
       history.pushState({}, null, `/#${e.target.dataset.name}`)
-      router()
+      router(routes)
     }
   }
 

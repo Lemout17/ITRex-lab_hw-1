@@ -14,7 +14,7 @@ const validationSignUp = () => {
     '.error-message__confirmPass'
   )
 
-  if (username.value === '') {
+  if (!username.value) {
     username.classList.add('form__input_error')
     errorMessageName.innerHTML = 'Please enter your name.'
     errorMessageName.classList.add('form__text_error')
@@ -34,7 +34,7 @@ const validationSignUp = () => {
     errorMessageName.innerHTML = ''
   }
 
-  if (surname.value === '') {
+  if (!surname.value) {
     surname.classList.add('form__input_error')
     errorMessageSurname.innerHTML = 'Please enter your surname.'
     errorMessageSurname.classList.add('form__text_error')
@@ -54,7 +54,7 @@ const validationSignUp = () => {
     errorMessageSurname.innerHTML = ''
   }
 
-  if (email.value === '') {
+  if (!email.value) {
     email.classList.add('form__input_error')
     errorMessageEmail.innerHTML = 'Please enter your email.'
     errorMessageEmail.classList.add('form__text_error')
@@ -75,7 +75,7 @@ const validationSignUp = () => {
     errorMessageEmail.innerHTML = ''
   }
 
-  if (password?.value === '') {
+  if (!password.value) {
     password.classList.add('form__input_error')
     errorMessagePassword.innerHTML = 'Please enter your password.'
     errorMessagePassword.classList.add('form__text_error')
@@ -96,7 +96,7 @@ const validationSignUp = () => {
     errorMessagePassword.innerHTML = ''
   }
 
-  if (confirmPass.value === '') {
+  if (!confirmPass.value) {
     confirmPass.classList.add('form__input_error')
     errorMessageConfirmPass.innerHTML = 'Please enter your password.'
     errorMessageConfirmPass.classList.add('form__text_error')
