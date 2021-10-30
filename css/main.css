@@ -125,14 +125,23 @@ p {
 }
 
 .container__doctor {
-  padding: 40px 24px;
+  width: 100%;
+  height: auto;
+  padding: 40px 24px 95px;
   outline: 1px solid green;
+  background-color: #f9faff;
+  box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.32);
+  border-radius: 16px 16px 0 0;
 }
 
 @media screen and (min-width: 768px) {
   .container {
     padding: 264px 96px 620px;
     border-radius: 0;
+  }
+  .container__doctor {
+    height: auto;
+    padding: 40px 48px;
   }
 }
 
@@ -159,6 +168,9 @@ p {
     background-image: url("../img/bg-tablet@x2.jpg");
     background-position: left;
     background-size: cover;
+  }
+  .section__doctor {
+    padding: 0 64px 48px;
   }
 }
 
@@ -590,15 +602,47 @@ p {
   background-image: url("../../../svg/doctor-page/sliders-v-alt.svg");
 }
 
+.doctor__empty-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 72px;
+  margin-bottom: 108px;
+}
+
+.doctor__empty-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 32px;
+  background-image: url("../../../svg/doctor-page/medical-history.svg");
+  background-size: cover;
+}
+
+.doctor__empty-text {
+  width: 240px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #a1abc9;
+}
+
 .doctor__card {
   width: 100%;
-  height: 272px;
+  height: 305px;
+  margin-bottom: 24px;
   border-radius: 12px;
   box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.24);
   background: #ffffff;
 }
 
-.doctor__card_avatar-wrapper {
+.doctor__card:last-child {
+  margin: 0;
+}
+
+.doctor__card_header-wrapper {
+  display: flex;
+  align-items: center;
   padding: 16px;
   border-bottom: 1px solid #dce0ec;
 }
@@ -606,7 +650,129 @@ p {
 .doctor__card_avatar {
   width: 48px;
   height: 48px;
+  margin-right: 16px;
   background-image: url("../../../img/doctor-page/patient.png");
   background-size: cover;
+}
+
+.doctor__card_text-wrapper {
+  width: 130px;
+  margin-right: 14px;
+}
+
+.doctor__card_text-name {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #202225;
+}
+
+.doctor__card_status-wrapper {
+  display: flex;
+  align-items: baseline;
+  margin-top: 5px;
+}
+
+.doctor__card_status-indicator {
+  width: 8px;
+  height: 8px;
+  padding: 4px;
+  border: none;
+  border-radius: 50%;
+  background-color: #34c197;
+}
+
+.doctor__card_text-status {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #a1abc9;
+}
+
+.doctor__card_button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../../svg/doctor-page/more-vertical.svg");
+  background-size: cover;
+}
+
+.doctor__card_desc-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px 24px 56px;
+}
+
+.doctor__card_date {
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #202225;
+}
+
+.doctor__card_date::before {
+  position: absolute;
+  top: 0;
+  left: -41px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  content: '';
+  background-image: url("../../../svg/doctor-page/clock-three.svg");
+  background-size: cover;
+}
+
+.doctor__card_description {
+  position: relative;
+  margin-top: 23px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.doctor__card_description::before {
+  position: absolute;
+  top: 0;
+  left: -41px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  content: '';
+  background-image: url("../../../svg/doctor-page/clipboard-blank.svg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .doctor__filter-wrapper {
+    margin: 56px auto 42px;
+  }
+  .doctor__empty-wrapper {
+    margin-top: 166px;
+    margin-bottom: 340px;
+  }
+  .doctor__card_header-wrapper {
+    padding: 24px 32px;
+  }
+  .doctor__card_button {
+    margin-left: auto;
+  }
+  .doctor__card_text-wrapper {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .doctor__empty-wrapper {
+    margin-top: 256px;
+    margin-bottom: 270px;
+  }
+  .doctor__list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(406px, 1fr));
+  }
 }
 /*# sourceMappingURL=main.css.map */
