@@ -1,4 +1,3 @@
-// import router from '../view/router.js'
 import validationSignIn from '../validation/validationSignIn.js'
 import validationSignUp from '../validation/validationSignUp.js'
 
