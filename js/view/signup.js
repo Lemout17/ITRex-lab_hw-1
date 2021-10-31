@@ -69,11 +69,8 @@ const SignUp = {
             </div>
           </div>
 
-          <button class="form__button form__button_register" type="submit" data-name="/doctor">
+          <button class="form__button" type="submit" data-name="/doctor">
             Sign up
-            <svg class="button__svg">
-              <use href="./svg/sprite.svg#icon-angle-right-b"></use>
-            </svg>
           </button>
 
           <div class="form__textwrapper">

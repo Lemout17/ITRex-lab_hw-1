@@ -6,49 +6,39 @@ const validationSignIn = () => {
     '.error-message__password'
   )
 
-  if (email.value === '') {
-    email.classList.add('form__input_error')
-    errorMessageEmail.innerHTML = 'Please enter your email.'
-    errorMessageEmail.classList.add('form__text_error')
-    return false
-  } else {
-    email.classList.remove('form__input_error')
-    errorMessageEmail.innerHTML = ''
+  const ifFieldValid = (target, message, reg) => {
+    if (!target.value) {
+      target.classList.add('form__input_error')
+      message.innerHTML = `Please enter your ${target.type}.`
+      message.classList.add('form__text_error')
+
+      return false
+    } else {
+      target.classList.remove('form__input_error')
+      message.innerHTML = ''
+    }
+
+    if (!reg(target.value)) {
+      target.classList.add('form__input_error')
+      message.innerHTML = `Please enter a valid ${target.type}.`
+      message.classList.add('form__text_error')
+
+      return false
+    } else {
+      target.classList.remove('form__input_error')
+      message.innerHTML = ''
+    }
+
+    return true
   }
 
-  if (!emailIsValid(email.value)) {
-    email.classList.add('form__input_error')
-    errorMessageEmail.innerHTML = 'Please enter a valid email.'
-    errorMessageEmail.classList.add('form__text_error')
+  const isSignInValid =
+    ifFieldValid(email, errorMessageEmail, emailIsValid) &&
+    ifFieldValid(password, errorMessagePassword, passwordIsValid)
 
-    return false
-  } else {
-    email.classList.remove('form__input_error')
-    errorMessageEmail.innerHTML = ''
-  }
+  console.log('isSignInValid', isSignInValid)
 
-  if (password?.value === '') {
-    password.classList.add('form__input_error')
-    errorMessagePassword.innerHTML = 'Please enter your password.'
-    errorMessagePassword.classList.add('form__text_error')
-    return false
-  } else {
-    password.classList.remove('form__input_error')
-    errorMessagePassword.innerHTML = ''
-  }
-
-  if (!passwordIsValid(password.value)) {
-    password.classList.add('form__input_error')
-    errorMessagePassword.innerHTML = 'Please enter a valid password.'
-    errorMessagePassword.classList.add('form__text_error')
-
-    return false
-  } else {
-    password.classList.remove('form__input_error')
-    errorMessagePassword.innerHTML = ''
-  }
-
-  return true
+  return isSignInValid
 }
 
 const emailIsValid = (email) => {

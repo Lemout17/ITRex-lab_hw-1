@@ -37,9 +37,6 @@ const SignIn = {
 
           <button class="form__button form__button_login" type="submit" data-name="/doctor">
             Sign in
-            <svg class="button__svg">
-              <use href="./svg/sprite.svg#icon-angle-right-b"></use>
-            </svg>
           </button>
 
           <a class="form__link form__link_login" href="#" data-name="/restore"

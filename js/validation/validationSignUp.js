@@ -14,125 +14,69 @@ const validationSignUp = () => {
     '.error-message__confirmPass'
   )
 
-  if (!username.value) {
-    username.classList.add('form__input_error')
-    errorMessageName.innerHTML = 'Please enter your name.'
-    errorMessageName.classList.add('form__text_error')
-    return false
-  } else {
-    username.classList.remove('form__input_error')
-    errorMessageName.innerHTML = ''
+  const ifFieldValid = (target, message, reg) => {
+    if (!target.value) {
+      target.classList.add('form__input_error')
+      message.innerHTML = `Please enter your ${target.type}.`
+      message.classList.add('form__text_error')
+
+      return false
+    } else {
+      target.classList.remove('form__input_error')
+      message.innerHTML = ''
+    }
+
+    if (!reg(target.value)) {
+      target.classList.add('form__input_error')
+      message.innerHTML = `Please enter a valid ${target.type}.`
+      message.classList.add('form__text_error')
+
+      return false
+    } else {
+      target.classList.remove('form__input_error')
+      message.innerHTML = ''
+    }
+
+    return true
   }
 
-  if (!usernameIsValid(username.value)) {
-    username.classList.add('form__input_error')
-    errorMessageName.innerHTML = 'Please enter a valid name.'
-    errorMessageName.classList.add('form__text_error')
-    return false
-  } else {
-    username.classList.remove('form__input_error')
-    errorMessageName.innerHTML = ''
+  const isPassEqual = (firstPass, secondPass, firstMess, secondMess, reg) => {
+    if (!reg(firstPass.value)) {
+      firstPass.classList.add('form__input_error')
+      firstMess.innerHTML = 'Passwords not equal'
+      firstMess.classList.add('form__text_error')
+      secondPass.classList.add('form__input_error')
+      secondMess.innerHTML = 'Passwords not equal'
+      secondMess.classList.add('form__text_error')
+
+      return false
+    } else {
+      firstPass.classList.remove('form__input_error')
+      firstMess.innerHTML = ''
+      secondPass.classList.remove('form__input_error')
+      secondMess.innerHTML = ''
+    }
+
+    return true
   }
 
-  if (!surname.value) {
-    surname.classList.add('form__input_error')
-    errorMessageSurname.innerHTML = 'Please enter your surname.'
-    errorMessageSurname.classList.add('form__text_error')
-    return false
-  } else {
-    surname.classList.remove('form__input_error')
-    errorMessageSurname.innerHTML = ''
-  }
+  const isSignUpValid =
+    ifFieldValid(username, errorMessageName, usernameIsValid) &&
+    ifFieldValid(surname, errorMessageSurname, usernameIsValid) &&
+    ifFieldValid(email, errorMessageEmail, emailIsValid) &&
+    ifFieldValid(password, errorMessagePassword, passwordIsValid) &&
+    ifFieldValid(confirmPass, errorMessageConfirmPass, passwordIsValid) &&
+    isPassEqual(
+      password,
+      confirmPass,
+      errorMessagePassword,
+      errorMessageConfirmPass,
+      passEqual
+    )
 
-  if (!usernameIsValid(surname.value)) {
-    surname.classList.add('form__input_error')
-    errorMessageSurname.innerHTML = 'Please enter a valid surname.'
-    errorMessageSurname.classList.add('form__text_error')
-    return false
-  } else {
-    surname.classList.remove('form__input_error')
-    errorMessageSurname.innerHTML = ''
-  }
+  console.log('isSignUpValid', isSignUpValid)
 
-  if (!email.value) {
-    email.classList.add('form__input_error')
-    errorMessageEmail.innerHTML = 'Please enter your email.'
-    errorMessageEmail.classList.add('form__text_error')
-    return false
-  } else {
-    email.classList.remove('form__input_error')
-    errorMessageEmail.innerHTML = ''
-  }
-
-  if (!emailIsValid(email.value)) {
-    email.classList.add('form__input_error')
-    errorMessageEmail.innerHTML = 'Please enter a valid email.'
-    errorMessageEmail.classList.add('form__text_error')
-
-    return false
-  } else {
-    email.classList.remove('form__input_error')
-    errorMessageEmail.innerHTML = ''
-  }
-
-  if (!password.value) {
-    password.classList.add('form__input_error')
-    errorMessagePassword.innerHTML = 'Please enter your password.'
-    errorMessagePassword.classList.add('form__text_error')
-    return false
-  } else {
-    password.classList.remove('form__input_error')
-    errorMessagePassword.innerHTML = ''
-  }
-
-  if (!passwordIsValid(password.value)) {
-    password.classList.add('form__input_error')
-    errorMessagePassword.innerHTML = 'Please enter a valid password.'
-    errorMessagePassword.classList.add('form__text_error')
-
-    return false
-  } else {
-    password.classList.remove('form__input_error')
-    errorMessagePassword.innerHTML = ''
-  }
-
-  if (!confirmPass.value) {
-    confirmPass.classList.add('form__input_error')
-    errorMessageConfirmPass.innerHTML = 'Please enter your password.'
-    errorMessageConfirmPass.classList.add('form__text_error')
-    return false
-  } else {
-    confirmPass.classList.remove('form__input_error')
-    errorMessageConfirmPass.innerHTML = ''
-  }
-
-  if (!passwordIsValid(confirmPass.value)) {
-    confirmPass.classList.add('form__input_error')
-    errorMessageConfirmPass.innerHTML = 'Please enter a valid password.'
-    errorMessageConfirmPass.classList.add('form__text_error')
-
-    return false
-  } else {
-    confirmPass.classList.remove('form__input_error')
-    errorMessageConfirmPass.innerHTML = ''
-  }
-
-  if (!passEqual(password.value)) {
-    password.classList.add('form__input_error')
-    errorMessagePassword.innerHTML = 'Passwords not equal'
-    errorMessagePassword.classList.add('form__text_error')
-    confirmPass.classList.add('form__input_error')
-    errorMessageConfirmPass.innerHTML = 'Passwords not equal'
-    errorMessageConfirmPass.classList.add('form__text_error')
-    return false
-  } else {
-    password.classList.remove('form__input_error')
-    errorMessagePassword.innerHTML = ''
-    confirmPass.classList.remove('form__input_error')
-    errorMessageConfirmPass.innerHTML = ''
-  }
-
-  return true
+  return isSignUpValid
 }
 
 const passEqual = (pass) => {

@@ -324,15 +324,10 @@ p {
   border-radius: 8px;
   background-color: #7297ff;
   cursor: pointer;
-}
-
-.button__svg {
-  position: absolute;
-  top: 10px;
-  right: 16px;
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+  background-image: url("../../../svg/angle-right-b.svg");
+  background-repeat: no-repeat;
+  background-position-x: 80px;
+  background-position-y: center;
 }
 
 .form__text {
@@ -420,10 +415,7 @@ p {
     padding: 16px 24px;
     margin-bottom: 120px;
     font-size: 17px;
-  }
-  .button__svg {
-    top: 15px;
-    right: 27px;
+    background-position-x: 100px;
   }
   .form__textwrapper {
     display: flex;
@@ -461,6 +453,7 @@ p {
 .form__button_login {
   width: 116px;
   margin-bottom: 32px;
+  background-position-x: 77px;
 }
 
 .form__link_login {
@@ -485,6 +478,7 @@ p {
   .form__button_login {
     width: 138px;
     margin-bottom: 32px;
+    background-position-x: 90px;
   }
   .form__textwrapper_login a {
     margin-left: 12px;
@@ -506,10 +500,7 @@ p {
 
 .form__button_restore {
   width: 198px;
-}
-
-.button__svg_restore {
-  right: 32px;
+  background-position-x: 145px;
 }
 
 .form__textwrapper_restore a {
@@ -532,6 +523,7 @@ p {
   .form__button_restore {
     width: 214px;
     margin-bottom: 32px;
+    background-position-x: 170px;
   }
   .form__textwrapper_restore a {
     margin-left: 12px;
