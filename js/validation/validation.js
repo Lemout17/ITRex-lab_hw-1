@@ -5,14 +5,12 @@ const ifFieldValid = (target, message, reg) => {
     target.classList.add('form__input_error')
     message.innerHTML = `Please enter a valid ${target.type}.`
     message.classList.add('form__text_error')
-
-    return false
   } else {
     target.classList.remove('form__input_error')
     message.innerHTML = ''
   }
 
-  return true
+  return isFieldValidCheck
 }
 
 export default ifFieldValid
