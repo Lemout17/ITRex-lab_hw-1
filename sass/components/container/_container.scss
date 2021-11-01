@@ -8,10 +8,27 @@
   background-color: $main-bg;
 }
 
+.container__doctor {
+  width: 100%;
+  height: auto;
+
+  padding: 40px 24px 95px;
+
+  outline: 1px solid green;
+  background-color: $main-bg;
+  box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.32);
+  border-radius: 16px 16px 0 0;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     padding: 264px 96px 620px;
     border-radius: 0;
+  }
+
+  .container__doctor {
+    height: auto;
+    padding: 40px 48px;
   }
 }
 

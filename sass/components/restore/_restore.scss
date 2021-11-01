@@ -6,10 +6,8 @@
 
 .form__button_restore {
   width: 198px;
-}
 
-.button__svg_restore {
-  right: 32px;
+  background-position-x: 145px;
 }
 
 .form__textwrapper_restore {
@@ -37,6 +35,8 @@
   .form__button_restore {
     width: 214px;
     margin-bottom: 32px;
+
+    background-position-x: 170px;
   }
 
   .form__textwrapper_restore {

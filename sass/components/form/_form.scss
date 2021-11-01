@@ -76,7 +76,23 @@
   right: 18px;
   width: 24px;
   height: 24px;
-  fill: currentColor;
+  color: $text-color;
+
+  background-size: cover;
+
+  cursor: pointer;
+}
+
+.input__svg_open {
+  background-image: url('../../../svg/eye.svg');
+}
+
+.input__svg_close {
+  background-image: url('../../../svg/eye-blocked.svg');
+}
+
+.input__svg_hidden {
+  display: none;
 }
 
 .form__input {
@@ -111,7 +127,8 @@
 }
 
 .form__text_error {
-  margin-bottom: 32px;
+  margin-top: 8px;
+  margin-bottom: 24px;
   font-size: 13px;
   font-weight: 400;
   line-height: 1.2;
@@ -136,15 +153,11 @@
   background-color: $input-accent;
 
   cursor: pointer;
-}
 
-.button__svg {
-  position: absolute;
-  top: 10px;
-  right: 16px;
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+  background-image: url('../../../svg/angle-right-b.svg');
+  background-repeat: no-repeat;
+  background-position-x: 80px;
+  background-position-y: center;
 }
 
 .form__text {
@@ -248,11 +261,8 @@
     padding: 16px 24px;
     margin-bottom: 120px;
     font-size: 17px;
-  }
 
-  .button__svg {
-    top: 15px;
-    right: 27px;
+    background-position-x: 100px;
   }
 
   .form__textwrapper {
