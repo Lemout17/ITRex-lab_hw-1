@@ -1,3 +1,5 @@
+import ifFieldValid from './validation.js'
+
 const validationSignUp = () => {
   const username = document.getElementById('name')
   const surname = document.getElementById('surname')
@@ -13,32 +15,6 @@ const validationSignUp = () => {
   const errorMessageConfirmPass = document.querySelector(
     '.error-message__confirmPass'
   )
-
-  const ifFieldValid = (target, message, reg) => {
-    if (!target.value) {
-      target.classList.add('form__input_error')
-      message.innerHTML = `Please enter your ${target.type}.`
-      message.classList.add('form__text_error')
-
-      return false
-    } else {
-      target.classList.remove('form__input_error')
-      message.innerHTML = ''
-    }
-
-    if (!reg(target.value)) {
-      target.classList.add('form__input_error')
-      message.innerHTML = `Please enter a valid ${target.type}.`
-      message.classList.add('form__text_error')
-
-      return false
-    } else {
-      target.classList.remove('form__input_error')
-      message.innerHTML = ''
-    }
-
-    return true
-  }
 
   const isPassEqual = (firstPass, secondPass, firstMess, secondMess, reg) => {
     if (!reg(firstPass.value)) {
